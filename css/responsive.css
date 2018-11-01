@@ -1,0 +1,10 @@
+@media all and (max-width: 1024px) {
+
+    .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 300px 2fr 1fr 50px; 
+    grid-template-areas: "nav" "header" "content" "aisde" "footer";
+    }
+
+}
+

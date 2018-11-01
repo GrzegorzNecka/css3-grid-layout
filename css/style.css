@@ -1,0 +1,64 @@
+body {
+
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+/*fr - 1 frakcja zajmuje całą wolną przestrzeń rodzica  */
+
+/*jeśli napiszę grid-template-columns: 1fr 1fr 1fr; to znaczy że dzielę grid-contaainer na 3 części po 33% szerokosci rodzica*/
+
+/*jeśli napiszę grid-template-columns: 2fr 1fr 1fr; to znaczy że dzielę grid-contaainer na 4 części po 25% szerokosci rodzica, ale 1 kolumna ma szerokość 50%*/
+
+.grid-container {
+    min-height: 100vh;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-rows: 300px 50px 1fr 50px;
+/*    definiuję układ wg. pojedynczych elementów, nazwa jest dowolna */
+    grid-template-areas: "header header" "nav nav" "content aisde" "footer footer";
+}
+
+.item p {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.header-item {
+    grid-area: header;
+    background-color: #df3b5a;
+}
+
+.nav-item {
+    grid-area: nav;
+    background-color: #11a9d3;
+}
+
+.main-item {
+    grid-area: content;
+    background-color: #f2c50e;
+}
+
+.aside-item {
+    grid-area: aisde;
+    background-color: #40d08e;
+}
+
+.footer-item {
+    grid-area: footer;
+    background-color: #7126c7;
+}
